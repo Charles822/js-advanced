@@ -33,14 +33,10 @@ function HtmlSelectElement(items = []) {
 	};
 	
 	this.removeItem = function(item) {
-		for (let i = 0; i < items.length; i++) {
-		    if (items[i] === item)
-		    	items.splice(i, 1);
+		this.items.splice(this.items.indexOf(item), 1);
 		}
-	}
 
 }
-
 
 HtmlSelectElement.prototype = new HtmlElement();
 HtmlSelectElement.prototype.constructor = HtmlSelectElement;
